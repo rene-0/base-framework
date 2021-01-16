@@ -1,0 +1,10 @@
+Options -MultiViews
+RewriteEngine On
+
+#RewriteBase caminho para o front controller
+#RewriteBase /receitasOn/public/
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.+)$ index.php?URL=$1 [QSA,L]
